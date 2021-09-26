@@ -1,0 +1,21 @@
+﻿
+@foreach(var i in l)
+            {
+    <Print p="i" Delete="Delete" Add="Add"/>
+                
+            }
+
+
+
+@code {
+    [Parameter] public List<Movie> l { get; set; }
+    public void Delete(Movie D1)
+    {
+        l.Remove(D1);
+    }
+    public void Add(Movie D2)
+    {
+        l.Add(D2);
+    }
+
+}

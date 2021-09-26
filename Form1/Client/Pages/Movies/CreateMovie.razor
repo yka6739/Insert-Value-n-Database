@@ -1,0 +1,16 @@
+﻿@page "/movies/create/{MovieId:int}"
+@inject NavigationManager navigationManager 
+<h3>CreateMovie</h3>
+
+<button class="btn btn-primary" @onclick="SaveMovie">SaveMovie</button>
+
+@code {
+    [Parameter] public int c { get; set; }
+
+    private void SaveMovie()
+    {
+        Console.WriteLine(navigationManager.Uri);
+        navigationManager.NavigateTo("movie");
+    }
+
+}
